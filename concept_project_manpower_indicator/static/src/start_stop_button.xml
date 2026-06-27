@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="concept_project_manpower_indicator.StartStopButton" owl="1">
+        <div class="o_status_menu dropdown">
+            <div class="dropdown-toggle d-flex align-items-center py-1 px-2 rounded fw-bold text-white shadow-sm" 
+                 data-bs-toggle="dropdown" 
+                 t-att-class="state.isStarted ? 'bg-success' : 'bg-danger'"
+                 style="cursor: pointer; transition: background 0.3s;"
+                 t-on-click="() => this.fetchStatusData()">
+                
+                <i t-att-class="state.isStarted ? 'fa fa-arrow-circle-up me-2 fs-5' : 'fa fa-arrow-circle-down me-2 fs-5'"/>
+                <span t-esc="state.isStarted ? 'On Duty' : 'Off Duty'"/>
+            </div>
+
+            <div class="dropdown-menu dropdown-menu-end shadow-lg border-0 p-0 mt-2" style="width: 320px; border-radius: 8px;">
+                <div class="p-3 border-bottom bg-light rounded-top">
+                    <div class="d-flex gap-2 mb-3">
+                        <button class="btn btn-success btn-sm flex-fill fw-bold shadow-sm" 
+                                t-on-click="() => this.toggleWork(true)">On duty</button>
+                        <button class="btn btn-danger btn-sm flex-fill fw-bold shadow-sm" 
+                                t-on-click="() => this.toggleWork(false)">Off duty</button>
+                    </div>
+                    
+                    <div class="d-flex rounded p-1" style="background-color: #e4e6e9;">
+                        <button class="btn btn-sm flex-fill fw-bold rounded border-0 transition-base" 
+                                t-att-class="state.activeTab === 'on_duty' ? 'bg-white text-dark shadow-sm' : 'text-muted bg-transparent'"
+                                t-on-click="(ev) => this.setTab('on_duty', ev)">
+                            On Duty List
+                        </button>
+                        <button class="btn btn-sm flex-fill fw-bold rounded border-0 transition-base" 
+                                t-att-class="state.activeTab === 'off_duty' ? 'bg-white text-dark shadow-sm' : 'text-muted bg-transparent'"
+                                t-on-click="(ev) => this.setTab('off_duty', ev)">
+                            Off Duty List
+                        </button>
+                    </div>
+                </div>
+
+                <div class="o_user_list_container" style="max-height: 350px; overflow-y: auto;">
+                    <t t-if="displayedUsers.length">
+                        <t t-foreach="displayedUsers" t-as="user" t-key="user.id">
+                            <div class="d-flex align-items-center justify-content-between px-3 py-2 border-bottom hover-bg-light" style="cursor: default;">
+                                <div class="d-flex align-items-center">
+                                    <img t-attf-src="/web/image?model=hr.employee&amp;id={{user.id}}&amp;field=avatar_128" 
+                                         class="rounded-circle me-3 border shadow-sm" 
+                                         style="width: 40px; height: 40px; object-fit: cover;"
+                                         onerror="this.src='/web/static/img/placeholder.png'"/>
+                                    <div>
+                                        <div class="fw-bold text-dark" t-esc="user.name"/>
+                                        <small class="text-muted" t-esc="user.department || 'Employee Profile'"/>
+                                    </div>
+                                </div>
+                                <div class="status-indicator">
+                                    <i t-if="user.is_started" class="fa fa-check-circle text-success ms-2 fs-4" title="On Duty"/>
+                                    <i t-else="" class="fa fa-circle text-danger ms-2 fs-4" title="Off Duty"/>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                    <t t-else="">
+                        <div class="p-4 text-center text-muted">
+                            <i class="fa fa-users-slash d-block fs-3 mb-2 opacity-50"/>
+                            No users found in this status.
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>
