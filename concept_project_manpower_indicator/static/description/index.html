@@ -1,174 +1,220 @@
-<section class="oe_container oe_dark" style="overflow: hidden; background-color: #f8f9fa; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-    <div class="oe_row oe_spaced text-center">
-        <h2 class="oe_slogan" style="color:#0085C3; font-weight: 800; font-size: 42px; margin-top: 30px;">Project Manpower Indicator</h2>
-        <h3 class="oe_slogan" style="font-weight: 400; color: #555; font-size: 22px; margin-bottom: 40px;">Track Employee On-Duty & Off-Duty Status in Real Time</h3>
-        <div class="oe_span12 text-center mb32">
-            <img src="banner.png" class="img-responsive" style="border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.15); max-width: 90%; margin: 0 auto; display: block;" alt="Project Manpower Indicator Banner"/>
-        </div>
-    </div>
-</section>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-<!-- Overview / Screenshot 1 -->
-<section class="oe_container" style="padding: 40px 0;">
-    <div class="oe_row oe_spaced align-items-center" style="display: flex; flex-wrap: wrap; align-items: center;">
-        <div class="oe_span6" style="padding: 20px;">
-            <h3 style="color: #0085C3; font-weight: bold; font-size: 28px;">Real-Time Employee Status Dashboard</h3>
-            <p style="font-size: 16px; color: #555; line-height: 1.6;">Monitor your workforce in real time with an intuitive employee dashboard. Instantly view employee availability and access the manpower status panel directly from the Employees module.</p>
-        </div>
-        <div class="oe_span6 text-center" style="padding: 20px;">
-            <img src="screenshot1.png" class="img-responsive" style="border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);" alt="Dashboard Overview"/>
-        </div>
-    </div>
-</section>
+<style>
+    .cs-container { font-family: 'Inter', sans-serif; color: #334155; }
+    .cs-hero { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); padding: 60px 20px; text-align: center; border-radius: 20px; margin-bottom: 40px; box-shadow: inset 0 2px 20px rgba(255,255,255,0.5); border: 1px solid #e2e8f0; }
+    .cs-title { font-weight: 800; font-size: 48px; background: linear-gradient(90deg, #1e293b, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; }
+    .cs-subtitle { font-size: 20px; font-weight: 400; color: #64748b; margin-bottom: 40px; }
+    .cs-banner-img { border-radius: 16px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); max-width: 95%; }
+    
+    .cs-section { padding: 60px 20px; }
+    .cs-section-title { font-weight: 800; font-size: 36px; color: #0f172a; text-align: center; margin-bottom: 50px; }
+    
+    .cs-feature-row { display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 80px; }
+    .cs-feature-row.reverse { flex-direction: row-reverse; }
+    .cs-text-col { padding: 30px; flex: 1; min-width: 300px; }
+    .cs-img-col { flex: 1; min-width: 300px; padding: 20px; text-align: center; }
+    .cs-feature-img { border-radius: 16px; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15); max-width: 100%; transition: transform 0.3s ease; }
+    .cs-feature-img:hover { transform: translateY(-5px); }
+    
+    .cs-h3 { font-size: 28px; font-weight: 800; color: #1e293b; margin-bottom: 20px; }
+    .cs-p { font-size: 16px; color: #475569; line-height: 1.7; margin-bottom: 20px; }
+    
+    .cs-list { list-style: none; padding: 0; }
+    .cs-list li { font-size: 16px; color: #334155; margin-bottom: 12px; display: flex; align-items: center; }
+    .cs-list i { color: #3b82f6; font-size: 20px; margin-right: 12px; }
+    
+    .cs-card { background: #fff; border-radius: 16px; padding: 30px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; transition: all 0.3s ease; height: 100%; }
+    .cs-card:hover { box-shadow: 0 20px 40px -5px rgba(0,0,0,0.1); transform: translateY(-5px); }
+    .cs-icon-wrapper { width: 60px; height: 60px; background: #eff6ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+    .cs-icon-wrapper i { font-size: 28px; color: #3b82f6; }
+    
+    .cs-step { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-bottom: 15px; display: flex; align-items: center; border-left: 4px solid #3b82f6; }
+    .cs-step-num { font-weight: 800; font-size: 24px; color: #cbd5e1; margin-right: 20px; width: 30px; text-align: center; }
+    
+    .cs-footer { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #fff; padding: 60px 20px; text-align: center; border-radius: 20px; margin-top: 40px; }
+    .cs-btn { background: #3b82f6; color: #fff; padding: 15px 40px; font-size: 18px; font-weight: 600; border-radius: 30px; text-decoration: none; display: inline-block; transition: background 0.3s ease; box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4); }
+    .cs-btn:hover { background: #2563eb; color: #fff; text-decoration: none; }
+</style>
 
-<!-- Screenshot 2 -->
-<section class="oe_container oe_dark" style="background-color: #f0f4f8; padding: 40px 0;">
-    <div class="oe_row oe_spaced align-items-center" style="display: flex; flex-wrap: wrap; align-items: center; flex-direction: row-reverse;">
-        <div class="oe_span6" style="padding: 20px;">
-            <h3 style="color: #0085C3; font-weight: bold; font-size: 28px;">Live On-Duty Employee List</h3>
-            <p style="font-size: 16px; color: #555; line-height: 1.6;">View all employees who are currently on duty. The floating panel provides an instant overview of active employees without leaving the current screen.</p>
-            <ul style="list-style: none; padding-left: 0; font-size: 16px; color: #333;">
-                <li style="margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #28a745; margin-right: 10px;"></i>Live On-Duty List</li>
-                <li style="margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #28a745; margin-right: 10px;"></i>Employee Name & Department</li>
-                <li style="margin-bottom: 10px;"><i class="fa fa-check-circle" style="color: #28a745; margin-right: 10px;"></i>Real-Time Status</li>
-            </ul>
-        </div>
-        <div class="oe_span6 text-center" style="padding: 20px;">
-            <img src="screenshot2.png" class="img-responsive" style="border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);" alt="On Duty Employees"/>
-        </div>
+<div class="cs-container">
+    <!-- Hero -->
+    <div class="cs-hero">
+        <h1 class="cs-title">Project Manpower Indicator</h1>
+        <p class="cs-subtitle">Track Employee On-Duty & Off-Duty Status in Real Time</p>
+        <img src="banner.png" class="cs-banner-img" alt="Banner"/>
     </div>
-</section>
 
-<!-- Screenshot 3 -->
-<section class="oe_container" style="padding: 40px 0;">
-    <div class="oe_row oe_spaced align-items-center" style="display: flex; flex-wrap: wrap; align-items: center;">
-        <div class="oe_span6" style="padding: 20px;">
-            <h3 style="color: #0085C3; font-weight: bold; font-size: 28px;">Off-Duty Employee List</h3>
-            <p style="font-size: 16px; color: #555; line-height: 1.6;">Quickly identify employees who have completed their work session. The Off Duty tab displays all employees who are currently unavailable.</p>
-            <ul style="list-style: none; padding-left: 0; font-size: 16px; color: #333;">
-                <li style="margin-bottom: 10px;"><i class="fa fa-times-circle" style="color: #dc3545; margin-right: 10px;"></i>Live Off-Duty List</li>
-                <li style="margin-bottom: 10px;"><i class="fa fa-times-circle" style="color: #dc3545; margin-right: 10px;"></i>Employee Department</li>
-                <li style="margin-bottom: 10px;"><i class="fa fa-times-circle" style="color: #dc3545; margin-right: 10px;"></i>Instant Status Updates</li>
-            </ul>
+    <!-- Details -->
+    <div class="cs-section">
+        
+        <!-- Screenshot 1 -->
+        <div class="cs-feature-row">
+            <div class="cs-text-col">
+                <h3 class="cs-h3">Real-Time Employee Status Dashboard</h3>
+                <p class="cs-p">Monitor your workforce in real time with an intuitive employee dashboard. Instantly view employee availability and access the manpower status panel directly from the Employees module.</p>
+            </div>
+            <div class="cs-img-col">
+                <img src="screenshot1.png" class="cs-feature-img" alt="Dashboard Overview"/>
+            </div>
         </div>
-        <div class="oe_span6 text-center" style="padding: 20px;">
-            <img src="screenshot3.png" class="img-responsive" style="border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);" alt="Off Duty Employees"/>
+
+        <!-- Screenshot 2 -->
+        <div class="cs-feature-row reverse">
+            <div class="cs-text-col">
+                <h3 class="cs-h3">Live On-Duty Employee List</h3>
+                <p class="cs-p">View all employees who are currently on duty. The floating panel provides an instant overview of active employees without leaving the current screen.</p>
+                <ul class="cs-list">
+                    <li><i class="fa fa-check-circle"></i> Live On-Duty List</li>
+                    <li><i class="fa fa-check-circle"></i> Employee Name & Department</li>
+                    <li><i class="fa fa-check-circle"></i> Real-Time Status</li>
+                </ul>
+            </div>
+            <div class="cs-img-col">
+                <img src="screenshot2.png" class="cs-feature-img" alt="On Duty Employees"/>
+            </div>
         </div>
+
+        <!-- Screenshot 3 -->
+        <div class="cs-feature-row">
+            <div class="cs-text-col">
+                <h3 class="cs-h3">Off-Duty Employee List</h3>
+                <p class="cs-p">Quickly identify employees who have completed their work session. The Off Duty tab displays all employees who are currently unavailable.</p>
+                <ul class="cs-list">
+                    <li><i class="fa fa-times-circle" style="color: #ef4444;"></i> Live Off-Duty List</li>
+                    <li><i class="fa fa-times-circle" style="color: #ef4444;"></i> Employee Department</li>
+                    <li><i class="fa fa-times-circle" style="color: #ef4444;"></i> Instant Status Updates</li>
+                </ul>
+            </div>
+            <div class="cs-img-col">
+                <img src="screenshot3.png" class="cs-feature-img" alt="Off Duty Employees"/>
+            </div>
+        </div>
+
+        <!-- Screenshot 4 -->
+        <div class="cs-feature-row reverse">
+            <div class="cs-text-col">
+                <h3 class="cs-h3">Manpower Activity Log</h3>
+                <p class="cs-p">Every work session is automatically recorded in the Manpower Log, allowing managers to review employee activity history accurately.</p>
+                <ul class="cs-list">
+                    <li><i class="fa fa-list-alt"></i> Employee & Status Tracking</li>
+                    <li><i class="fa fa-clock-o"></i> Precise Start & End Time</li>
+                    <li><i class="fa fa-calendar"></i> Date of Session Logged</li>
+                </ul>
+            </div>
+            <div class="cs-img-col">
+                <img src="screenshot4.png" class="cs-feature-img" alt="Manpower Log"/>
+            </div>
+        </div>
+        
     </div>
-</section>
 
-<!-- Screenshot 4 -->
-<section class="oe_container oe_dark" style="background-color: #f0f4f8; padding: 40px 0;">
-    <div class="oe_row oe_spaced align-items-center" style="display: flex; flex-wrap: wrap; align-items: center; flex-direction: row-reverse;">
-        <div class="oe_span6" style="padding: 20px;">
-            <h3 style="color: #0085C3; font-weight: bold; font-size: 28px;">Manpower Activity Log</h3>
-            <p style="font-size: 16px; color: #555; line-height: 1.6;">Every work session is automatically recorded in the Manpower Log, allowing managers to review employee activity history.</p>
-            <ul style="list-style: none; padding-left: 0; font-size: 16px; color: #333;">
-                <li style="margin-bottom: 10px;"><i class="fa fa-list-alt" style="color: #0085C3; margin-right: 10px;"></i>Employee & Status</li>
-                <li style="margin-bottom: 10px;"><i class="fa fa-clock-o" style="color: #0085C3; margin-right: 10px;"></i>Start & End Time</li>
-                <li style="margin-bottom: 10px;"><i class="fa fa-calendar" style="color: #0085C3; margin-right: 10px;"></i>Date of Session</li>
-            </ul>
-        </div>
-        <div class="oe_span6 text-center" style="padding: 20px;">
-            <img src="screenshot4.png" class="img-responsive" style="border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);" alt="Manpower Activity Log"/>
-        </div>
-    </div>
-</section>
-
-<!-- Screenshot 5 & 6 -->
-<section class="oe_container" style="padding: 40px 0;">
-    <div class="row" style="margin: 0; display: flex; flex-wrap: wrap;">
-        <div class="col-md-6" style="padding: 20px;">
-            <div style="background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
-                <h3 style="color: #0085C3; font-weight: bold; font-size: 24px; margin-bottom: 15px;">Dedicated Reporting Menu</h3>
-                <p style="font-size: 15px; color: #555; margin-bottom: 20px;">Access manpower reports directly from the Reporting menu for quick navigation and easy workforce monitoring.</p>
-                <div class="text-center">
-                    <img src="screenshot5.png" class="img-responsive" style="border-radius: 8px; max-height: 250px; margin: 0 auto;" alt="Reporting Menu"/>
+    <!-- Highlight Cards (5 & 6) -->
+    <div class="cs-section" style="background: #f8fafc; border-radius: 20px; padding: 60px 40px; margin-bottom: 60px;">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="cs-card text-center">
+                    <h3 class="cs-h3" style="font-size: 22px;">Dedicated Reporting Menu</h3>
+                    <p class="cs-p text-center">Access manpower reports directly from the Reporting menu for quick navigation.</p>
+                    <img src="screenshot5.png" class="cs-feature-img" style="max-height: 250px; margin-top: 20px;" alt="Reporting Menu"/>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6" style="padding: 20px;">
-            <div style="background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
-                <h3 style="color: #0085C3; font-weight: bold; font-size: 24px; margin-bottom: 15px;">Employee Status Indicator</h3>
-                <p style="font-size: 15px; color: #555; margin-bottom: 20px;">The status button in the top navigation instantly displays whether the current employee is On Duty or Off Duty. Switch status with a single click.</p>
-                <div class="text-center">
-                    <img src="screenshot6.png" class="img-responsive" style="border-radius: 8px; max-height: 250px; margin: 0 auto;" alt="Employee Status Indicator"/>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Features List -->
-<section class="oe_container oe_dark" style="background-color: #f8f9fa; padding: 50px 0;">
-    <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan text-center" style="color:#0085C3; font-weight: bold; font-size: 32px; margin-bottom: 40px;">Core Features</h2>
-        <div class="row" style="margin: 0;">
-            <div class="col-md-6 mb-4" style="padding: 10px 20px;">
-                <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); display: flex; align-items: center;">
-                    <i class="fa fa-eye" style="font-size: 24px; color: #0085C3; width: 40px; text-align: center;"></i>
-                    <span style="font-size: 16px; font-weight: bold; color: #333; margin-left: 15px;">Real-Time On/Off Duty Monitoring</span>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4" style="padding: 10px 20px;">
-                <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); display: flex; align-items: center;">
-                    <i class="fa fa-columns" style="font-size: 24px; color: #0085C3; width: 40px; text-align: center;"></i>
-                    <span style="font-size: 16px; font-weight: bold; color: #333; margin-left: 15px;">Floating Employee Status Panel</span>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4" style="padding: 10px 20px;">
-                <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); display: flex; align-items: center;">
-                    <i class="fa fa-history" style="font-size: 24px; color: #0085C3; width: 40px; text-align: center;"></i>
-                    <span style="font-size: 16px; font-weight: bold; color: #333; margin-left: 15px;">Manpower Activity Log & Tracking</span>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4" style="padding: 10px 20px;">
-                <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); display: flex; align-items: center;">
-                    <i class="fa fa-clock-o" style="font-size: 24px; color: #0085C3; width: 40px; text-align: center;"></i>
-                    <span style="font-size: 16px; font-weight: bold; color: #333; margin-left: 15px;">Start Time & End Time Recording</span>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4" style="padding: 10px 20px;">
-                <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); display: flex; align-items: center;">
-                    <i class="fa fa-sitemap" style="font-size: 24px; color: #0085C3; width: 40px; text-align: center;"></i>
-                    <span style="font-size: 16px; font-weight: bold; color: #333; margin-left: 15px;">Department-wise Employee Status</span>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4" style="padding: 10px 20px;">
-                <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); display: flex; align-items: center;">
-                    <i class="fa fa-cogs" style="font-size: 24px; color: #0085C3; width: 40px; text-align: center;"></i>
-                    <span style="font-size: 16px; font-weight: bold; color: #333; margin-left: 15px;">Integrated with Employees & Project</span>
+            <div class="col-md-6 mb-4">
+                <div class="cs-card text-center">
+                    <h3 class="cs-h3" style="font-size: 22px;">Employee Status Indicator</h3>
+                    <p class="cs-p text-center">Instantly see if the current employee is On/Off Duty in the top navigation.</p>
+                    <img src="screenshot6.png" class="cs-feature-img" style="max-height: 250px; margin-top: 20px;" alt="Status Indicator"/>
                 </div>
             </div>
         </div>
     </div>
-</section>
 
-<!-- Installation -->
-<section class="oe_container" style="padding: 50px 0;">
-    <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan text-center" style="color:#0085C3; font-weight: bold; font-size: 32px; margin-bottom: 40px;">Easy Installation & Usage</h2>
-        <div class="row justify-content-center" style="margin: 0;">
-            <div class="col-md-8 offset-md-2" style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                <ol style="font-size: 18px; color: #444; line-height: 1.8; margin-bottom: 0;">
-                    <li style="margin-bottom: 15px;"><strong>Install the module</strong> from the Odoo Apps menu.</li>
-                    <li style="margin-bottom: 15px;"><strong>Open the Employees module</strong> to view the dashboard and floating panel.</li>
-                    <li style="margin-bottom: 15px;"><strong>Click On Duty</strong> via the status indicator to start a work session.</li>
-                    <li style="margin-bottom: 15px;"><strong>Click Off Duty</strong> to end the work session.</li>
-                    <li><strong>Review activity</strong> under <em>Reporting → Manpower Log</em>.</li>
-                </ol>
+    <!-- Features Grid -->
+    <div class="cs-section">
+        <h2 class="cs-section-title">Core Features</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="cs-card">
+                    <div class="cs-icon-wrapper"><i class="fa fa-eye"></i></div>
+                    <h4 style="font-weight: 800; font-size: 18px; color: #0f172a; margin-bottom: 10px;">Real-Time Monitoring</h4>
+                    <p style="color: #64748b; font-size: 14px; margin: 0;">Monitor On and Off Duty statuses in real-time seamlessly.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="cs-card">
+                    <div class="cs-icon-wrapper"><i class="fa fa-columns"></i></div>
+                    <h4 style="font-weight: 800; font-size: 18px; color: #0f172a; margin-bottom: 10px;">Floating Status Panel</h4>
+                    <p style="color: #64748b; font-size: 14px; margin: 0;">Access employee status from a convenient floating panel.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="cs-card">
+                    <div class="cs-icon-wrapper"><i class="fa fa-history"></i></div>
+                    <h4 style="font-weight: 800; font-size: 18px; color: #0f172a; margin-bottom: 10px;">Activity Logs</h4>
+                    <p style="color: #64748b; font-size: 14px; margin: 0;">Keep a detailed history of all manpower activities and sessions.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="cs-card">
+                    <div class="cs-icon-wrapper"><i class="fa fa-clock-o"></i></div>
+                    <h4 style="font-weight: 800; font-size: 18px; color: #0f172a; margin-bottom: 10px;">Precision Time Tracking</h4>
+                    <p style="color: #64748b; font-size: 14px; margin: 0;">Accurately record the exact Start Time and End Time.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="cs-card">
+                    <div class="cs-icon-wrapper"><i class="fa fa-sitemap"></i></div>
+                    <h4 style="font-weight: 800; font-size: 18px; color: #0f172a; margin-bottom: 10px;">Department Overview</h4>
+                    <p style="color: #64748b; font-size: 14px; margin: 0;">Categorize and filter employee statuses department-wise.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="cs-card">
+                    <div class="cs-icon-wrapper"><i class="fa fa-cogs"></i></div>
+                    <h4 style="font-weight: 800; font-size: 18px; color: #0f172a; margin-bottom: 10px;">Seamless Integration</h4>
+                    <p style="color: #64748b; font-size: 14px; margin: 0;">Perfectly integrated with standard Employees and Project modules.</p>
+                </div>
             </div>
         </div>
     </div>
-</section>
 
-<!-- Support -->
-<section class="oe_container oe_dark" style="background-color: #0085C3; color: white; padding: 50px 0; text-align: center;">
-    <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan" style="color: white; font-weight: bold; margin-bottom: 20px;">Professional Support & Assistance</h2>
-        <p style="font-size: 18px; max-width: 600px; margin: 0 auto 30px auto; opacity: 0.9;">
+    <!-- Installation -->
+    <div class="cs-section" style="background: #f8fafc; border-radius: 20px;">
+        <h2 class="cs-section-title">Quick Installation & Usage</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="cs-step">
+                    <div class="cs-step-num">1</div>
+                    <div style="font-size: 16px;"><strong>Install the module</strong> directly from your Odoo Apps menu.</div>
+                </div>
+                <div class="cs-step">
+                    <div class="cs-step-num">2</div>
+                    <div style="font-size: 16px;"><strong>Open the Employees module</strong> to view the dashboard and floating panel.</div>
+                </div>
+                <div class="cs-step">
+                    <div class="cs-step-num">3</div>
+                    <div style="font-size: 16px;"><strong>Click On Duty</strong> via the top status indicator to start a work session.</div>
+                </div>
+                <div class="cs-step">
+                    <div class="cs-step-num">4</div>
+                    <div style="font-size: 16px;"><strong>Click Off Duty</strong> to end the work session.</div>
+                </div>
+                <div class="cs-step">
+                    <div class="cs-step-num">5</div>
+                    <div style="font-size: 16px;"><strong>Review activity</strong> safely under <em>Reporting → Manpower Log</em>.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="cs-footer">
+        <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 20px;">Professional Support & Assistance</h2>
+        <p style="font-size: 18px; color: #94a3b8; max-width: 600px; margin: 0 auto 30px auto;">
             Need help configuring, require custom features, or just want to say hi? Our expert team is ready to assist you.
         </p>
-        <a class="btn btn-light btn-lg" href="https://www.csloman.com/contactus" style="color: #0085C3; font-weight: bold; padding: 12px 35px; border-radius: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);"><i class="fa fa-envelope mr-2"></i> Contact Us Today</a>
+        <a href="https://www.csloman.com/contactus" class="cs-btn"><i class="fa fa-envelope" style="margin-right: 10px;"></i> Contact Us Today</a>
     </div>
-</section>
+</div>
