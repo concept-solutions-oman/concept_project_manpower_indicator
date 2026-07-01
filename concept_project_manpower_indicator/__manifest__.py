@@ -5,7 +5,10 @@
     "category": "Project",
     "author": "Concept Solutions ",
     "website": "https://www.csloman.com",
-    "license": "LGPL-3",
+    "license": "OPL-1",
+    "price": "15.00",
+    "currency": "USD",
+    "images": ["static/description/banner.png"],
     "depends": ["project", "mail", "web", "hr"],
     "data": [
        "security/ir.model.access.csv",
