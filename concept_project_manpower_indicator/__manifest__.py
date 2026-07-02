@@ -1,5 +1,5 @@
 {
-    "name": "concept Project Manpower Indicator",
+    "name": "Project Manpower Indicator",
     "version": "1.0.0",
     "summary": "Add Start/Stop manpower indicator buttons to Project Tasks",
     "category": "Project",
